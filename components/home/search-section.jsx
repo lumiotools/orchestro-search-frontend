@@ -27,7 +27,7 @@ export function SearchSection() {
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.8 }}
+        transition={{ delay: 0.4, duration: 0.8 }}
       >
         <div className="p-2 custom-secondary-card hover:scale-[1.01] transition-all duration-300 rounded-xl">
           <div
