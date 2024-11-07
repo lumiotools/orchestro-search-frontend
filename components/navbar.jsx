@@ -10,7 +10,7 @@ export function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 w-full z-50 bg-black/95 border-b border-golden-500/20"
+      className="fixed top-0 w-full z-50 bg-black/95 border-b border-golden-500/20 px-8"
     >
       <div className="container mx-auto px-4">
         <div

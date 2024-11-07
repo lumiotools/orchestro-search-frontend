@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useToast } from "@/hooks/use-toast";
 import axios from "axios";
+import { motion } from "framer-motion";
 import { LinkIcon, LoaderCircle, SendIcon, User2 } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
@@ -97,11 +98,14 @@ const ChatPage = () => {
         <ScrollArea className="flex-1 p-0 px-6" ref={scrollRef}>
           <div className="space-y-4 py-6">
             {[...chatHistory].map(({ content, role, sources }, index) => (
-              <div
+              <motion.div
                 key={index}
                 className={`flex ${
                   role === "user" ? "justify-end" : "justify-start"
                 }`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
                 <div
                   className={`flex gap-3 max-w-[80%] ${
@@ -153,23 +157,33 @@ const ChatPage = () => {
                     )}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
 
             {thinking && (
-              <div className="flex justify-start gap-3">
+              <motion.div
+                className="flex justify-start gap-3"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+              >
                 <LoaderCircle className="animate-spin bg-secondary text-primary rounded-full size-9 p-1.5" />
 
                 <div className="rounded-lg p-3 bg-secondary text-secondary-foreground">
                   <p className="text-sm">Thinking...</p>
                 </div>
-              </div>
+              </motion.div>
             )}
           </div>
         </ScrollArea>
 
         <div className="p-4 border-t border-white/10">
-          <div className="flex gap-2">
+          <motion.div
+            className="flex gap-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <Input
               ref={inputRef}
               value={question}
@@ -186,7 +200,7 @@ const ChatPage = () => {
             >
               <SendIcon className="h-4 w-4" />
             </Button>
-          </div>
+          </motion.div>
         </div>
       </Card>
     </div>
