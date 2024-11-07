@@ -175,7 +175,7 @@ const ChatPage = () => {
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               onKeyPress={question && !thinking ? handleKeyPress : undefined}
-              placeholder="Ask about shipping rates, tracking, or services..."
+              placeholder="Ask Your Shipping query..."
               className="flex-1 bg-black/30 border-white/20"
             />
 
