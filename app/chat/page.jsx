@@ -94,7 +94,7 @@ const ChatPage = () => {
 
   return (
     <div className="max-w-screen-lg mx-auto h-[calc(100vh-65px-64px)] pt-8">
-      <Card className="flex flex-col h-full p-0 shadow-xl shadow-primary/15">
+      <div className="custom-secondary-border-card flex flex-col h-full p-0 shadow-xl shadow-primary/15 rounded-2xl transition-all duration-300 ease-in-out">
         <ScrollArea className="flex-1 p-0 px-6" ref={scrollRef}>
           <div className="space-y-4 py-6">
             {[...chatHistory].map(({ content, role, sources }, index) => (
@@ -186,7 +186,7 @@ const ChatPage = () => {
               onChange={(e) => setQuestion(e.target.value)}
               onKeyPress={question && !thinking ? handleKeyPress : undefined}
               placeholder="Ask Your Shipping query..."
-              className="flex-1 bg-black/30 border-white/20"
+              className="flex-1 custom-secondary-card outline-none !ring-transparent !ring-offset-0 !border-none"
             />
 
             <Button
@@ -198,7 +198,7 @@ const ChatPage = () => {
             </Button>
           </motion.div>
         </div>
-      </Card>
+      </div>
     </div>
   );
 };
