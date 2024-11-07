@@ -1,9 +1,9 @@
 "use client"
-import { HeroSection } from "@/components/hero-section";
-import { PopularTools } from "@/components/popular-tools";
-import { QuickActions } from "@/components/quick-actions";
-import { SearchSection } from "@/components/search-section";
-import { ToolsCarousel } from "@/components/tools-carousel";
+import { HeroSection } from "@/components/home/hero-section";
+import { PopularTools } from "@/components/home/popular-tools";
+import { QuickActions } from "@/components/home/quick-actions";
+import { SearchSection } from "@/components/home/search-section";
+import { ToolsCarousel } from "@/components/home/tools-carousel";
 
 export default function Home() {
   return (

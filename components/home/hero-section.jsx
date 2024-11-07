@@ -66,7 +66,7 @@ export function HeroSection() {
           >
             <Link href={"/chat"}>
             <Button
-              className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-black text-lg px-8 py-6 rounded-xl transform transition-all hover:scale-105"
+              className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-black text-lg px-8 py-6 rounded-xl transform transition-all hover:scale-105 duration-300"
             >
               Get Started
             </Button>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -23,29 +23,26 @@ export function SearchSection() {
   ];
 
   return (
-    <div
-      className="relative w-full max-w-4xl mx-auto px-3 -mt-20 sm:-mt-20 z-10 "
-    >
+    <div className="relative w-full max-w-4xl mx-auto px-3 -mt-20 sm:-mt-20 z-10 ">
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.8 }}
       >
-        <Card
-          className="p-2 bg-black/40 backdrop-blur-xl border-white/20 shadow-2xl hover:shadow-amber-500/20 transition-all duration-500"
-        >
-          <Button
+        <Card className="p-2 bg-black/40 backdrop-blur-xl border-white/20 shadow-2xl hover:shadow-amber-500/20 hover:scale-[1.01] transition-all duration-300">
+          <div
             onClick={handleClick}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
-            className="w-full h-10 flex items-center justify-between bg-transparent hover:bg-white/0 text-left px-6 rounded-xl group relative overflow-hidden"
+            variant="ghost"
+            className="w-full flex items-center justify-between pl-4 cursor-pointer"
+            // className="w-full h-10 flex items-center justify-between bg-transparent hover:bg-white/0 text-left px-2 rounded-xl group relative overflow-hidden focus:!ring-transparent focus:!ring-offset-0"
           >
             <motion.span
               animate={{ opacity: searchValue ? 1 : 0.7 }}
               className="text-lg text-gray-400"
             >
-              {searchValue ||
-                "Ask Your Shipping query..."}
+              {searchValue || "Ask Your Shipping query..."}
             </motion.span>
 
             <motion.div
@@ -53,9 +50,7 @@ export function SearchSection() {
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-amber-500 to-yellow-500 rounded-lg p-3 group-hover:shadow-lg transition-all duration-300"
             >
-              <SendIcon
-                className="h-5 w-5 text-black"
-              />
+              <SendIcon className="h-5 w-5 text-black" />
             </motion.div>
 
             {/* Animated Focus Ring */}
@@ -69,7 +64,7 @@ export function SearchSection() {
                 />
               )}
             </AnimatePresence>
-          </Button>
+          </div>
         </Card>
       </motion.div>
 
