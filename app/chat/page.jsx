@@ -137,22 +137,18 @@ const ChatPage = () => {
 
                     {sources && sources.length > 0 && (
                       <div className="flex flex-wrap gap-2">
-                        {sources.map((source, index) =>
-                          source.score > 0.8 ? (
-                            <a
-                              key={index}
-                              href={source.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-1 text-xs text-amber-500 hover:text-amber-400"
-                            >
-                              <LinkIcon className="h-3 w-3" />
-                              {source.url}
-                            </a>
-                          ) : (
-                            <></>
-                          )
-                        )}
+                        {sources.map((source, index) => (
+                          <a
+                            key={index}
+                            href={source.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 text-xs text-amber-500 hover:text-amber-400"
+                          >
+                            <LinkIcon className="h-3 w-3" />
+                            {source.url}
+                          </a>
+                        ))}
                       </div>
                     )}
                   </div>
