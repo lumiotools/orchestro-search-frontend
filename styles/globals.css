@@ -21,7 +21,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  @apply !bg-[#222224] !w-2;
+  @apply !bg-[#222224] !size-2;
 }
 
 /* Style the scrollbar handle */
