@@ -40,11 +40,11 @@ export function HeroSection() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-4xl md:text-6xl xl:text-7xl font-bold text-white tracking-tight"
           >
-            Shipping Rate{" "}
+            Shipping AI{" "}
             <span
               className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-yellow-500"
             >
-              Calculator
+               Intelligence
             </span>
           </motion.h1>
 
@@ -54,8 +54,7 @@ export function HeroSection() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg sm:text-xl text-gray-200 max-w-2xl"
           >
-            Compare shipping rates from multiple carriers and find the best
-            option for your needs.
+            Transforming Global Logistics Through Advanced AI Solutions.
           </motion.p>
 
           <motion.div

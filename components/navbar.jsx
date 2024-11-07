@@ -23,7 +23,7 @@ export function Navbar() {
             <h1
               className="text-2xl font-bold bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent cursor-pointer"
             >
-              ShipTools
+              ShipTalk
             </h1>
             </Link>
             <div
