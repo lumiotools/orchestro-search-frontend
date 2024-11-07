@@ -99,8 +99,8 @@ export function ToolsCarousel({ title, category }) {
         <div
           className="flex w-full space-x-4 pb-4"
         >
-          {tools[category].map((tool) => (
-            <Link href={tool.link}>
+          {tools[category].map((tool,i) => (
+            <Link href={tool.link} key={i}>
             <Card
               key={tool.id}
               className="w-[300px] flex-none bg-black/50 border border-white/10 hover:border-amber-500/50 transition-all duration-300"
