@@ -10,11 +10,11 @@ export default function Home() {
     <div className="space-y-12 px-8">
       <div className="relative">
         <HeroSection />
-        <SearchSection />
+        {/* <SearchSection /> */}
       </div>
       <QuickActions />
       <ToolsCarousel title="Popular Shipping Tools" category="popular" />
-      <ToolsCarousel title="International Shipping" category="international" />
+      {/* <ToolsCarousel title="International Shipping" category="international" /> */}
       <PopularTools />
     </div>
   );

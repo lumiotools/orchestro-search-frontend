@@ -10,7 +10,7 @@ const tools = {
     {
       id: 1,
       title: "Cost to Serve Analysis",
-      description: "analyse coast",
+      description: "Analyse cost",
       icon: "📊",
       color: "from-amber-500 to-yellow-500",
       link:"https://shiptalk-tools.vercel.app/cost-to-serve-analysis"
@@ -73,7 +73,7 @@ export function ToolsCarousel({ title, category }) {
         >
           {title}
         </h2>
-        <div className="flex space-x-2">
+        {/* <div className="flex space-x-2">
           <Button
             variant="outline"
             size="icon"
@@ -90,22 +90,22 @@ export function ToolsCarousel({ title, category }) {
               className="h-4 w-4"
             />
           </Button>
-        </div>
+        </div> */}
       </div>
 
       <ScrollArea
         className="w-full whitespace-nowrap rounded-md"
       >
         <div
-          className="flex w-full space-x-4 pb-4"
+          className="flex w-full pb-4 gap-8"
         >
           {tools[category].map((tool,i) => (
-            <Link href={tool.link} key={i}>
-            <Card
+            // <Link className="w-full flex-1" href={tool.link} key={i}>
+            <div
               key={tool.id}
-              className="w-[300px] flex-none bg-black/50 border border-white/10 hover:border-amber-500/50 transition-all duration-300"
+              className="flex-1 custom-secondary-card transition-all duration-300 rounded-xl"
             >
-              <CardContent className="p-6">
+              <div className="p-6">
                 <div
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${tool.color} flex items-center justify-center text-2xl mb-4`}
                 >
@@ -116,12 +116,12 @@ export function ToolsCarousel({ title, category }) {
                 >
                   {tool.title}
                 </h3>
-                <p className="text-gray-400">
+                <p className="w-full text-ellipsis overflow-hidden text-wrap text-gray-400">
                   {tool.description}
                 </p>
-              </CardContent>
-            </Card>
-            </Link>
+              </div>
+            </div>
+            // </Link>
           ))}
         </div>
         <ScrollBar

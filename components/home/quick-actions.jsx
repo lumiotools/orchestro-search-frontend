@@ -32,14 +32,14 @@ const quickActions = [
 export function QuickActions() {
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16"
     >
       {quickActions.map((action, index) => (
-        <Card
+        <div
           key={index}
-          className="bg-black/50 border border-white/10 hover:border-amber-500/50 transition-all duration-300 cursor-pointer group"
+          className="custom-secondary-card transition-all duration-300 cursor-pointer group rounded-xl"
         >
-          <CardContent className="p-6">
+          <div className="p-6">
             <div
               className={`w-12 h-12 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
             >
@@ -55,8 +55,8 @@ export function QuickActions() {
             <p className="text-sm text-gray-400">
               {action.description}
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       ))}
     </div>
   );

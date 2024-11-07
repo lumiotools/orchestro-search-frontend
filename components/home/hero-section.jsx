@@ -3,12 +3,11 @@ import { Button } from "@/components/ui/button";
 import { PlayCircleIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { SearchSection } from "./search-section";
 
 export function HeroSection() {
   return (
-    <div
-      className="relative h-[85vh] sm:h-[70vh] rounded-xl overflow-hidden"
-    >
+    <div className="relative h-[75vh] sm:h-[60vh] rounded-xl overflow-hidden">
       {/* Background Image with Zoom Effect */}
       <motion.div
         initial={{ scale: 1.1 }}
@@ -31,9 +30,7 @@ export function HeroSection() {
         className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"
       >
         {/* Content Container */}
-        <div
-          className="absolute bottom-32 left-0 p-4 sm:p-8 space-y-6 max-w-4xl"
-        >
+        <div className="absolute bottom-20 left-0 p-4 sm:p-8 space-y-4 max-w-4xl">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,10 +38,8 @@ export function HeroSection() {
             className="text-4xl md:text-6xl xl:text-7xl font-bold text-white tracking-tight"
           >
             Shipping AI{" "}
-            <span
-              className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-yellow-500"
-            >
-               Intelligence
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-yellow-500">
+              Intelligence
             </span>
           </motion.h1>
 
@@ -61,15 +56,15 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col items-center sm:flex-row gap-4 !mt-8"
           >
             <Link href={"/chat"}>
-            <Button
-              className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-black text-lg px-8 py-6 rounded-xl transform transition-all hover:scale-105 duration-300"
-            >
-              Get Started
-            </Button>
+              <Button className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-black text-lg px-8 py-6 rounded-xl transform transition-all hover:scale-[1.02] duration-300">
+                Get Started
+              </Button>
             </Link>
+
+            <SearchSection />
             {/* <Button
               variant="outline"
               className="border-white/30 text-white hover:bg-white/20 text-lg px-8 py-6 rounded-xl backdrop-blur-sm transform transition-all hover:scale-105"

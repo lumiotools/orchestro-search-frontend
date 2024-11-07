@@ -14,7 +14,7 @@ const tools = [
   {
     id: 2,
     name: "FedEx Integration",
-    logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAbCAMAAAAeYLy0AAAAnFBMVEX///8+AIXSyd89CpHaVzz/ZwBNFIz/XQD/WQBLDotDAIf/ZADCt9T/ybU2AIE6AIP/wKvk4Oz/9/SsnsX/5+Cypcm4rM1YK5L/rI9aL5P/VAD/uKDt6vLNxNze2ejwxL1uT54uAIvYTCyNd7FmQpn/SgD/l2//fEN7X6aXhLj/oX7/ci7/eDtTIo+ejLz/jWH/bB//3dNfOJb/0cOYCLkbAAABRElEQVQ4je2S3XbCIBCEoa38LCkhCUFNMKZV22jVmvj+71ag2qM2eu2Fc8ECh+8wO4DQQ3coGwVNzjarKJq+Bl0HnyR2iuuzzUy+vVMvdgPEhMexvADh+WUwYE63QD60SZL8B1mrtb4JjsMkybPIV2vyJA9g6lZp6sdj6bFqZlLKGFcokjiWc36wSkcLJlL0URSfPSABgCGASRqASnJY1kA86NNBKya+Rkys+8LZRMYAH5t8C5xw7F6m8zfSUimF0DcVVOyu9igJeK8xEOlWS99jcTixFr/t9qTqCobGJtbaBmIXcBPC0SHVPRNCrPxR3faAM4CJ3c67DPNukmHy945tIcROsJHjSrU/BSUmvm5cmFhuUYMBO9+Hn0N1QYs2ZXRRIq32p6DNjQmTrO4a/2OzbphVxkzVUc6gVqpML6w+dBf6AbhjGOjXqfYGAAAAAElFTkSuQmCC",
+    logo: "/logo/fedex.png",
     description:
       "Comprehensive FedEx shipping tools for business and personal use",
     features: ["Multi-Package Shipping", "International", "Express"],
@@ -44,16 +44,16 @@ export function PopularTools() {
         Carrier Integration Tools
       </h2>
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
       >
         {tools.map((tool) => (
-          <Card
+          <div
             key={tool.id}
-            className="bg-black/50 border border-white/10 hover:border-amber-500/50 transition-all duration-300"
+            className="custom-card hover:border-amber-500/50 transition-all duration-300 !rounded-3xl"
           >
-            <CardContent className="p-6 space-y-4">
+            <div className="p-6 space-y-4">
               <div
-                className="aspect-square rounded-lg overflow-hidden"
+                className="aspect-video rounded-lg overflow-hidden"
               >
                 <img
                   src={tool.logo}
@@ -82,8 +82,8 @@ export function PopularTools() {
                   </Badge>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         ))}
       </div>
     </div>

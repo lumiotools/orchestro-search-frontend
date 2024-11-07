@@ -10,11 +10,7 @@ body {
       #ffb2230c,
       #222224
     ),
-    radial-gradient(
-      farthest-side at 0% 100%,
-      #ffb2230c,
-      #222224
-    );
+    radial-gradient(farthest-side at 0% 100%, #ffb2230c, #222224);
   background-size: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   background-position: 100% 0%, 0% 100%;
@@ -27,6 +23,29 @@ body {
 /* Style the scrollbar handle */
 ::-webkit-scrollbar-thumb {
   @apply !bg-primary/20 !rounded-md;
+}
+
+.custom-secondary-card {
+  box-shadow: rgba(255, 255, 255, 0.35) 0px -0.76px 0.76px 0px inset,
+    rgba(0, 0, 0, 0.25) 1.52px 3.04px 3.04px 0px inset;
+  background: rgba(51, 51, 51, 0.75);
+}
+
+.custom-secondary-card:hover {
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 4px 2px inset,
+    rgba(0, 0, 0, 0.25) 0px 0px 6px 3px inset;
+}
+
+.custom-card {
+  background: linear-gradient(
+    105.87deg,
+    rgba(255, 255, 255, 0.15) 3.04%,
+    rgba(255, 255, 255, 0) 96.05%
+  ) !important;
+  backdrop-filter: saturate(180%) blur(40px) !important;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 18.26px 22.83px 0px,
+    rgba(255, 255, 255, 0.35) -0.76px 0.76px 0.76px -1.52px inset,
+    rgba(255, 255, 255, 0.35) 0px 0.76px 3.09px 0px inset !important;
 }
 
 @layer base {
