@@ -1,21 +1,23 @@
-"use client";
-import { HeroSection } from "@/components/home/hero-section";
-import { PopularTools } from "@/components/home/popular-tools";
-import { QuickActions } from "@/components/home/quick-actions";
-import { SearchSection } from "@/components/home/search-section";
-import { ToolsCarousel } from "@/components/home/tools-carousel";
+import ChatInput from "@/components/chat/chatInput";
+import ChatProvider from "@/components/chat/chatProvider";
+import ChatScreen from "@/components/chat/chatScreen";
+import LandingHero from "@/components/landing/hero";
+import React from "react";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className="space-y-12 px-8">
-      <div className="relative">
-        <HeroSection />
-        {/* <SearchSection /> */}
+    <ChatProvider>
+      <div className="max-w-screen-xl mx-auto h-[calc(100vh-64px)]">
+        <div className="custom-secondary-border-card flex flex-col h-full p-0 shadow-xl shadow-primary/15 rounded-2xl transition-all duration-300 ease-in-out">
+          <LandingHero />
+
+          {/* <ChatScreen /> */}
+
+          <ChatInput />
+        </div>
       </div>
-      <QuickActions />
-      <ToolsCarousel title="Popular Shipping Tools" category="popular" />
-      {/* <ToolsCarousel title="International Shipping" category="international" /> */}
-      <PopularTools />
-    </div>
+    </ChatProvider>
   );
-}
+};
+
+export default HomePage;

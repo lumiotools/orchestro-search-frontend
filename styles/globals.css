@@ -7,10 +7,10 @@ body {
   background-color: #222224;
   background-image: radial-gradient(
       farthest-side at 100% 10%,
-      #ffb2230c,
+      #ffb22326,
       #222224
     ),
-    radial-gradient(farthest-side at 0% 100%, #ffb2230c, #222224);
+    radial-gradient(farthest-side at 0% 100%, #ffb22326, #222224);
   background-size: 50% 50%, 50% 50%;
   background-repeat: no-repeat, no-repeat;
   background-position: 100% 0%, 0% 100%;
