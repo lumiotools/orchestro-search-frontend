@@ -1,15 +1,12 @@
 "use client";
 import React, { useContext } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, BellIcon, UserCircleIcon } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import Link from "next/link";
 import { ChatContext } from "./chat/chatProvider";
-import { useRouter } from "next/navigation";
 
 export function Navbar() {
   const { chatHistory, setChatHistory, controller } = useContext(ChatContext);
-
-  const router = useRouter();
 
   return (
     <nav className="w-full z-50 custom-border-card border-golden-500/20 px-8">
@@ -18,7 +15,7 @@ export function Navbar() {
           <div className="flex items-center space-x-8">
             <Link href={"/"}>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent cursor-pointer">
-                ShipTalk
+                ShipSearch AI
               </h1>
             </Link>
             <div className="hidden md:flex items-center space-x-6">
