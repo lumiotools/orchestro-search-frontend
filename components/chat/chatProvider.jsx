@@ -22,17 +22,17 @@ const ChatProvider = ({ children }) => {
   //     inputRef.current.focus();
   //   }, []);
 
-  const handleAsk = async () => {
+  const handleAsk = async (userQuestion = question) => {
     setThinking(true);
     try {
-      setChatHistory([...chatHistory, { role: "user", content: question }]);
+      setChatHistory([...chatHistory, { role: "user", content: userQuestion }]);
       setQuestion("");
 
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/api/v1/chat`,
         {
           chatHistory: chatHistory.map(({ sources, ...chat }) => ({ ...chat })),
-          message: question,
+          message: userQuestion,
         }
       );
 
@@ -44,7 +44,7 @@ const ChatProvider = ({ children }) => {
 
       setChatHistory([
         ...chatHistory,
-        { role: "user", content: question },
+        { role: "user", content: userQuestion },
         {
           role: "assistant",
           content: responseData.message,
