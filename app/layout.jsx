@@ -10,7 +10,7 @@ const RootLayout = ({ children }) => {
       <ChatProvider>
         <div className="min-h-screen">
           <Navbar />
-          <main className="container mx-auto px-4 pb-8">{children}</main>
+          <main className="mx-auto px-4 pb-8">{children}</main>
         </div>
         </ChatProvider>
       </body>
