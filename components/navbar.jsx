@@ -9,8 +9,8 @@ export function Navbar() {
   const { chatHistory, setChatHistory } = useContext(ChatContext);
 
   return (
-    <nav className=" w-full z-50 custom-border-card border-golden-500/20 px-8">
-      <div className="max-w-screen-xl mx-auto px-4">
+    <nav className="w-full z-50 custom-border-card border-golden-500/20 px-8">
+      <div className="max-w-screen-xl mx-auto px-2">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
             <Link href={"/"}>
