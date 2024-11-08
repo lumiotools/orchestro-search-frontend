@@ -13,7 +13,7 @@ const ChatScreen = () => {
 
   const scrollRef = useRef(null);
 
-  const scrollToBottom = () => {
+  const scrollToBottom = () => {  
     if (scrollRef.current) {
       const scrollContainer = scrollRef.current.querySelector(
         "[data-radix-scroll-area-viewport]"
@@ -30,8 +30,12 @@ const ChatScreen = () => {
     }, 0);
   }, [chatHistory]);
 
+  if(chatHistory.length == 0) {
+    return  null;
+  }
+
   return (
-    <ScrollArea className="flex-1 p-0 px-6" ref={scrollRef}>
+    <ScrollArea className="flex-1 p-0 pt-1 px-6" ref={scrollRef}>
       <div className="space-y-4 py-6">
         {[...chatHistory].map(({ content, role, sources }, index) => (
           <motion.div

@@ -1,24 +1,58 @@
 import { Hand, HandHelping, Handshake } from "lucide-react";
 import React from "react";
-
+import {motion } from "framer-motion"
 const LandingHero = () => {
   return (
     <div className="py-20 flex flex-col items-center space-y-1">
-      <div
+      <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      transition={{
+        duration:0.4,
+        ease:"easeInOut"
+      }}
         className={`w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-500 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
       >
         <Hand className="h-6 w-6 text-white" />
-      </div>
-      <h1 className="text-4xl font-semibold text-center text-white">
+      </motion.div>
+      <motion.h1
+           initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration:0.4,
+            delay:0.2,
+            ease:"easeInOut"
+          }}
+      className="text-4xl font-semibold text-center text-white">
         Hi, I am{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-yellow-500">
           ShipTalk AI
         </span>
-      </h1>
+      </motion.h1>
 
-      <h2 className="text-xl font-medium text-center text-muted-foreground">
+      <motion.h2
+         initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration:0.4,
+          ease:"easeInOut",
+          delay:0.3
+        }}
+      className="text-xl font-medium text-center text-muted-foreground">
         How can I help you with any shipping query ?
-      </h2>
+      </motion.h2>
       {/* <p className="text-center "></p> */}
       {/* <p className="max-w-md text-sm text-center tracking-wide text-muted-foreground">Ready to assist you with anything you need, from answering questions to providing recommendations. Let's get started!</p> */}
     </div>
