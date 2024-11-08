@@ -13,7 +13,7 @@ const ChatScreen = () => {
 
   const scrollRef = useRef(null);
 
-  const scrollToBottom = () => {  
+  const scrollToBottom = () => {
     if (scrollRef.current) {
       const scrollContainer = scrollRef.current.querySelector(
         "[data-radix-scroll-area-viewport]"
@@ -30,8 +30,8 @@ const ChatScreen = () => {
     }, 0);
   }, [chatHistory]);
 
-  if(chatHistory.length == 0) {
-    return  null;
+  if (chatHistory.length == 0) {
+    return null;
   }
 
   return (
