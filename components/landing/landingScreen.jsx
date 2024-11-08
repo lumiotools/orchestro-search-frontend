@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import LandingHero from "./hero";
 import { ChatContext } from "../chat/chatProvider";
-import { QuickActions } from "../old/home/quick-actions";
+import { QuickActions } from "./quick-actions";
 
 const LandingScreen = () => {
   const { chatHistory,handleAsk } = useContext(ChatContext);

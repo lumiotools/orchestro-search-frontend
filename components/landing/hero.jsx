@@ -3,7 +3,7 @@ import React from "react";
 import {motion } from "framer-motion"
 const LandingHero = () => {
   return (
-    <div className="py-20 flex flex-col items-center space-y-1">
+    <div className="pt-16 pb-8 flex flex-col items-center space-y-1">
       <motion.div
       initial={{
         opacity: 0,

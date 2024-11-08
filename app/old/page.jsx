@@ -1,7 +1,7 @@
 "use client";
 import { HeroSection } from "@/components/old/home/hero-section";
 import { PopularTools } from "@/components/old/home/popular-tools";
-import { QuickActions } from "@/components/old/home/quick-actions";
+import { QuickActions } from "@/components/landing/quick-actions";
 import { SearchSection } from "@/components/old/home/search-section";
 import { ToolsCarousel } from "@/components/old/home/tools-carousel";
 
