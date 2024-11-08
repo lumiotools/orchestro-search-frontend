@@ -3,7 +3,7 @@ import React from "react";
 
 const LandingHero = () => {
   return (
-    <div className="flex-1 px-6 py-20 flex flex-col items-center">
+    <div className="py-20 flex flex-col items-center">
       <div
         className={`w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
       >
