@@ -14,6 +14,7 @@ const ChatProvider = ({ children }) => {
   ]);
   const [question, setQuestion] = useState("");
   const [thinking, setThinking] = useState(false);
+  const [controller, setController] = useState();
   const { toast } = useToast();
 
   const inputRef = useRef(null);
@@ -28,11 +29,17 @@ const ChatProvider = ({ children }) => {
       setChatHistory([...chatHistory, { role: "user", content: userQuestion }]);
       setQuestion("");
 
+      const controller = new AbortController();
+      setController(controller);
+
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/api/v1/chat`,
         {
           chatHistory: chatHistory.map(({ sources, ...chat }) => ({ ...chat })),
           message: userQuestion,
+        },
+        {
+          signal: controller.signal,
         }
       );
 
@@ -75,6 +82,7 @@ const ChatProvider = ({ children }) => {
         setChatHistory,
         question,
         setQuestion,
+        controller,
         thinking,
         setThinking,
         inputRef,

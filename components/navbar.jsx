@@ -4,9 +4,12 @@ import { Button } from "@/components/ui/button";
 import { MessageSquare, BellIcon, UserCircleIcon } from "lucide-react";
 import Link from "next/link";
 import { ChatContext } from "./chat/chatProvider";
+import { useRouter } from "next/navigation";
 
 export function Navbar() {
-  const { chatHistory, setChatHistory } = useContext(ChatContext);
+  const { chatHistory, setChatHistory, controller } = useContext(ChatContext);
+
+  const router = useRouter();
 
   return (
     <nav className="w-full z-50 custom-border-card border-golden-500/20 px-8">
@@ -34,7 +37,10 @@ export function Navbar() {
           {chatHistory.length > 0 && (
             <div className="flex items-center space-x-4">
               <Button
-                onClick={() => setChatHistory([])}
+                onClick={() => {
+                  setChatHistory([]);
+                  controller?.abort();
+                }}
                 variant="ghost"
                 // size="icon"
                 className="relative custom-secondary-card !bg-transparent hover:!bg-transparent"
