@@ -46,18 +46,18 @@ export function QuickActions({handleSentPrompt}) {
         >
           <div className="p-4">
             <div
-              className={`size-10 rounded-lg bg-gradient-to-br ${action.color} mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+              className={`size-8 md:size-10 rounded-lg bg-gradient-to-br ${action.color} mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
             >
               <action.icon
-                className="size-5 text-white"
+                className="size-4 md:size-5 text-white"
               />
             </div>
             <h3
-              className="text-lg font-semibold text-white"
+              className="md:text-lg font-semibold text-white"
             >
               {action.title}
             </h3>
-            <p className="text-sm text-gray-400">
+            <p className="hidden md:block text-sm text-gray-400">
               {action.description}
             </p>
           </div>
