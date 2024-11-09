@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { LinkIcon, LoaderCircle, User2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const ChatScreen = () => {
   const { chatHistory, thinking } = useContext(ChatContext);
@@ -72,7 +73,7 @@ const ChatScreen = () => {
                       : "bg-secondary text-secondary-foreground"
                   }`}
                 >
-                  <ReactMarkdown>{content}</ReactMarkdown>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
                 </div>
 
                 {sources && sources.length > 0 && (
