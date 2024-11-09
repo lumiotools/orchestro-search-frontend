@@ -33,7 +33,7 @@ const ChatInput = () => {
         />
 
         <Button
-          onClick={handleAsk}
+          onClick={() => handleAsk()}
           disabled={!question || thinking}
           className="bg-amber-500 hover:bg-amber-600 text-black"
         >
