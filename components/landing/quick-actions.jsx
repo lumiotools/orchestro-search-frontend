@@ -32,7 +32,7 @@ const quickActions = [
 export function QuickActions({handleSentPrompt}) {
   return (
     <motion.div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16"
+      className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-16"
       
     >
       {quickActions.map((action, index) => (
@@ -41,7 +41,7 @@ export function QuickActions({handleSentPrompt}) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 * index, duration: 0.5, ease: "easeInOut" }}
           key={index}
-          className="custom-card transition-all duration-300 cursor-pointer group rounded-xl"
+          className="custom-card transition-all duration-300 cursor-pointer group rounded-xl h-32 sm:h-auto"
           onClick={()=>handleSentPrompt(action.description)}
         >
           <div className="p-4">
@@ -53,7 +53,7 @@ export function QuickActions({handleSentPrompt}) {
               />
             </div>
             <h3
-              className="md:text-lg font-semibold text-white"
+              className="md:text-lg md:font-semibold text-white"
             >
               {action.title}
             </h3>

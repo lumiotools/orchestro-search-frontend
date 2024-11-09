@@ -18,7 +18,7 @@ const LandingScreen = () => {
   return (
     <div className="flex-1 px-6 flex justify-between flex-col">
       <LandingHero />
-      <div className="px-5 py-3 pb-8">
+      <div className="md:px-5 py-3 pb-8">
           <QuickActions handleSentPrompt={handleSentPrompt}/>
       </div>
     </div>

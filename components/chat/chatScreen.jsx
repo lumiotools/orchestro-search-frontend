@@ -49,8 +49,8 @@ const ChatScreen = () => {
             transition={{ duration: 0.5 }}
           >
             <div
-              className={`flex gap-3 max-w-[80%] ${
-                role === "user" ? "flex-row-reverse" : "flex-row"
+              className={`flex gap-3 max-w-[90%] md:max-w-[80%] ${
+                role === "user" ? "flex-col items-end md:items-start md:flex-row-reverse" : "flex-col md:flex-row"
               }`}
             >
               {role === "assistant" ? (
