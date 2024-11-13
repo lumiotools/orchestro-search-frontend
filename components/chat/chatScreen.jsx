@@ -50,7 +50,9 @@ const ChatScreen = () => {
           >
             <div
               className={`flex gap-3 max-w-[90%] md:max-w-[80%] ${
-                role === "user" ? "flex-col items-end md:items-start md:flex-row-reverse" : "flex-col md:flex-row"
+                role === "user"
+                  ? "flex-col items-end md:items-start md:flex-row-reverse"
+                  : "flex-col md:flex-row"
               }`}
             >
               {role === "assistant" ? (
@@ -73,7 +75,18 @@ const ChatScreen = () => {
                       : "bg-secondary text-secondary-foreground"
                   }`}
                 >
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      a: (props) => (
+                        <a href={props.href} target="_blank" rel="noreferrer">
+                          {props.children}
+                        </a>
+                      ),
+                    }}
+                  >
+                    {content}
+                  </ReactMarkdown>
                 </div>
 
                 {sources && sources.length > 0 && (
